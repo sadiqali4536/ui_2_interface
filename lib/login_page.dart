@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_second/Homepage.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -21,18 +22,21 @@ class _LoginPageState extends State<LoginPage> {
             padding: EdgeInsets.all(8.0),
             child: SizedBox(height: 100,),
           ),
-          const Text("Email",style: TextStyle(color: Colors.white),),
+           
           SizedBox(
             width: 400,
           child: Column(mainAxisAlignment: MainAxisAlignment.start,
-            children: [
+            children: [ const Padding(padding: EdgeInsets.all(1)),const Align(alignment: Alignment.topLeft,
+            child: Text("Email",style: TextStyle(color: Colors.white,fontSize: 20),)),
+              
               const TextField(decoration: InputDecoration(prefixIcon:Icon(Icons.email),fillColor: Colors.white,filled: true,
              hintText:"Enter your Email Id",
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.all(
                   Radius.circular(40)))),),
                   const SizedBox(height: 30,),
-                  const Text("Password",style: TextStyle(color: Colors.white),),
+                  const Align(alignment: Alignment.topLeft,
+                    child: Text("Password",style: TextStyle(color: Colors.white,fontSize: 20),)),
                   const SizedBox(width: 400,
                   child: Column(mainAxisAlignment: MainAxisAlignment.center,
                   children: [TextField(decoration: InputDecoration(prefixIcon: Icon(Icons.password),fillColor: Colors.white,filled: true,
@@ -45,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
                   width: 250,
                     child: MaterialButton(color: Colors.black ,shape:const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(50))),
-                    onPressed:(){},child: const Center(
+                    onPressed:(){Navigator.push(context,MaterialPageRoute(builder: (_) =>const Homepage() ));},child: const Center(
                     child: Text("Login",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 40,color: Colors.white),),
                     ),),
                     ),

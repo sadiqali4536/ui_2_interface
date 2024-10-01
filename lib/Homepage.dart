@@ -14,14 +14,14 @@ class _HomepageState extends State<Homepage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.blue,
+        backgroundColor: const Color.fromARGB(255, 165, 175, 183),
         title: const Text(
           "Home Page",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         automaticallyImplyLeading: true,
       ),
-      backgroundColor: const Color.fromARGB(255, 182, 188, 174),
+      backgroundColor: const Color.fromARGB(255, 144, 184, 91),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -38,10 +38,9 @@ class _HomepageState extends State<Homepage> {
             ),
             ElevatedButton(
                 style:
-                    ElevatedButton.styleFrom(backgroundColor: Colors.redAccent),
+                    ElevatedButton.styleFrom(backgroundColor: const Color.fromARGB(255, 22, 21, 21)),
                 onPressed: () {
-                  Navigator.pop(context,
-                      MaterialPageRoute(builder: (_) =>  const LoginPage()));
+                  Navigator.pop(context);
                 },
                 child: const Text(
                   "LOGOUT",
