@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
     "name": "ui_second",
     "short_name": "ui_second",
+=======
+    "name": "profile_demo",
+    "short_name": "profile_demo",
+>>>>>>> e726753 (3-10-24)
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
